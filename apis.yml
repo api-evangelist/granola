@@ -1,0 +1,116 @@
+aid: granola
+url: https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/apis.yml
+name: Granola
+kind: company
+description: >-
+  Granola is an AI notepad for back-to-back meetings. It captures audio
+  directly from the user's computer (no meeting bot), enhances handwritten
+  notes with AI, and supports post-meeting tasks like follow-up drafting,
+  action item extraction, and chat over the transcript. Works across Zoom,
+  Google Meet, Webex, Microsoft Teams, and Slack. Granola exposes a public
+  Granola API (Business and Enterprise plans) for programmatic access to
+  notes, transcripts, and folders, plus an MCP server for conversational AI
+  clients. Webhooks are on the roadmap; Zapier covers event-style automation
+  today.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - Meeting Notes
+  - Transcription
+  - Productivity
+  - API
+  - MCP
+  - Zapier
+  - Business
+  - Enterprise
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: granola:desktop-app
+    name: Granola Desktop & Mobile App
+    description: >-
+      Consumer desktop app (macOS / Windows) and iPhone app that records
+      meeting audio locally, enhances notes with AI, and supports
+      customizable templates for different meeting types.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.granola.ai/
+    baseURL: https://www.granola.ai
+    tags:
+      - Consumer
+      - Desktop
+      - Mobile
+      - Templates
+    properties:
+      - type: ProductPage
+        url: https://www.granola.ai/
+      - type: IntegrationsGuide
+        url: https://www.granola.ai/blog/granola-integrations-complete-guide-connecting-meeting-tools
+  - aid: granola:public-api
+    name: Granola Public API
+    description: >-
+      REST API for programmatic access to meeting notes, transcripts, AI
+      summaries, and folders. Authentication is Bearer token using API keys
+      prefixed with `grn_`, created in Settings → Connectors → API keys.
+      Requires Business or Enterprise plan. Endpoints include GET /notes,
+      GET /notes/{id}, and GET /folders. Rate limits are 25 requests burst /
+      5 requests per second sustained. Webhooks are on the roadmap; current
+      pattern is polling.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.granola.ai/help-center/sharing/integrations/granola-api
+    baseURL: https://public-api.granola.ai/v1
+    tags:
+      - REST
+      - API Key
+      - Bearer Token
+      - Notes
+      - Transcripts
+      - Folders
+    properties:
+      - type: Documentation
+        url: https://docs.granola.ai/introduction
+      - type: APIDocs
+        url: https://docs.granola.ai/help-center/sharing/integrations/granola-api
+      - type: DocsIndex
+        url: https://docs.granola.ai/llms.txt
+      - type: LaunchAnnouncement
+        url: https://www.createwith.com/tool/granola/updates/granola-launches-api-to-connect-meeting-notes-with-ai-agents-and-external-tools
+  - aid: granola:zapier
+    name: Granola Zapier Integration
+    description: >-
+      Zapier integration for event-style automation connecting Granola to
+      8,000+ apps. Useful for webhook-like patterns until Granola ships
+      native webhooks.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://zapier.com/apps/granola/integrations
+    baseURL: https://zapier.com
+    tags:
+      - Zapier
+      - Automation
+      - Webhooks
+      - Integration
+    properties:
+      - type: ZapierApp
+        url: https://zapier.com/apps/granola/integrations
+      - type: WebhookConnector
+        url: https://zapier.com/apps/granola/integrations/webhook
+common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/granola-ai
+  - type: Website
+    url: https://www.granola.ai/
+  - type: Documentation
+    url: https://docs.granola.ai/introduction
+  - type: APIDocs
+    url: https://docs.granola.ai/help-center/sharing/integrations/granola-api
+  - type: Blog
+    url: https://www.granola.ai/blog
+  - type: Plans
+    url: plans/granola-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/granola-rate-limits.yml
+  - type: FinOps
+    url: finops/granola-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
