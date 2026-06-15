@@ -1,0 +1,81 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Granola Public API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List notes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://public-api.granola.ai/v1/notes",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "Pagination cursor"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "createdAfter",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "createdBefore",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List notes accessible to the API key. Only returns notes that have a generated AI summary and transcript. Use `cursor` for pagination."
+        },
+        {
+          "info": {
+            "name": "Retrieve a note",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://public-api.granola.ai/v1/notes/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve a single note, optionally including the full transcript via `include=transcript`. Returns 404 if the note is still processing or does not have an AI summary."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
