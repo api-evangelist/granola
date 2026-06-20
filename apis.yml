@@ -12,7 +12,7 @@ description: >-
   notes, transcripts, and folders, plus an MCP server for conversational AI
   clients. Webhooks are on the roadmap; Zapier covers event-style automation
   today.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Meeting Notes
@@ -33,7 +33,7 @@ apis:
       Consumer desktop app (macOS / Windows) and iPhone app that records
       meeting audio locally, enhances notes with AI, and supports
       customizable templates for different meeting types.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.granola.ai/
     baseURL: https://www.granola.ai
     tags:
@@ -56,7 +56,7 @@ apis:
       GET /notes/{id}, and GET /folders. Rate limits are 25 requests burst /
       5 requests per second sustained. Webhooks are on the roadmap; current
       pattern is polling.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.granola.ai/help-center/sharing/integrations/granola-api
     baseURL: https://public-api.granola.ai/v1
     tags:
@@ -81,7 +81,7 @@ apis:
       Zapier integration for event-style automation connecting Granola to
       8,000+ apps. Useful for webhook-like patterns until Granola ships
       native webhooks.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://zapier.com/apps/granola/integrations
     baseURL: https://zapier.com
     tags:
