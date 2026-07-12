@@ -95,6 +95,14 @@ apis:
       - type: WebhookConnector
         url: https://zapier.com/apps/granola/integrations/webhook
 common:
+  - type: TrustCenter
+    url: security/granola-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/granola-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/granola-domain-security.yml
+  - type: Authentication
+    url: authentication/granola-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/granola-ai
   - type: Website

@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://www.granola.ai/security
+url: https://www.granola.ai/security
+certifications:
+- SOC 2
+- GDPR
+evidence:
+- source: https://www.granola.ai/security
+  keywords:
+  - soc 2
+  - gdpr
