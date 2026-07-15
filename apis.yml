@@ -95,6 +95,8 @@ apis:
       - type: WebhookConnector
         url: https://zapier.com/apps/granola/integrations/webhook
 common:
+  - type: AgenticAccess
+    url: agentic-access/granola-agentic-access.yml
   - type: TrustCenter
     url: security/granola-trust-center.yml
   - type: VulnerabilityDisclosure
