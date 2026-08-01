@@ -1,0 +1,128 @@
+openapi: 3.1.0
+info:
+  title: Granola Public API
+  description: >-
+    Best-effort OpenAPI 3.1 for Granola's Public API (Business and
+    Enterprise plans). Provides read access to AI-summarized meeting notes
+    and their transcripts. Authentication uses bearer API keys
+    (`grn_...`). Rate limits are 25 requests per 5 seconds burst, 5
+    requests/second sustained.
+  version: 'v1'
+servers:
+  - url: https://public-api.granola.ai/v1
+security:
+  - bearerAuth: []
+tags:
+  - name: Notes
+paths:
+  /notes:
+    get:
+      tags: [Notes]
+      summary: List notes
+      description: >-
+        List notes accessible to the API key. Only returns notes that have a
+        generated AI summary and transcript. Use `cursor` for pagination.
+      operationId: listNotes
+      parameters:
+        - in: query
+          name: cursor
+          schema: { type: string }
+          description: Pagination cursor
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 25
+            maximum: 100
+        - in: query
+          name: createdAfter
+          schema: { type: string, format: date-time }
+        - in: query
+          name: createdBefore
+          schema: { type: string, format: date-time }
+      responses:
+        '200':
+          description: A page of notes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/Note' }
+                  cursor: { type: string, nullable: true }
+                  hasMore: { type: boolean }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+  /notes/{id}:
+    get:
+      tags: [Notes]
+      summary: Retrieve a note
+      description: >-
+        Retrieve a single note, optionally including the full transcript via
+        `include=transcript`. Returns 404 if the note is still processing or
+        does not have an AI summary.
+      operationId: getNote
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: include
+          schema:
+            type: string
+            enum: [transcript]
+      responses:
+        '200':
+          description: Note
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Note' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { description: Not found or not yet summarized }
+        '429': { $ref: '#/components/responses/RateLimited' }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API key (grn_...)
+  responses:
+    Unauthorized:
+      description: Missing or invalid API key
+    RateLimited:
+      description: Rate limit exceeded
+  schemas:
+    Note:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        summary: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+        meetingStartAt: { type: string, format: date-time }
+        meetingEndAt: { type: string, format: date-time }
+        scope:
+          type: string
+          enum: [personal, public]
+        attendees:
+          type: array
+          items:
+            type: object
+            properties:
+              name: { type: string }
+              email: { type: string, format: email }
+        transcript:
+          type: array
+          description: Present only when include=transcript is specified
+          items:
+            type: object
+            properties:
+              speaker: { type: string }
+              startMs: { type: integer }
+              endMs: { type: integer }
+              text: { type: string }

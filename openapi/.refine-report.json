@@ -1,0 +1,14 @@
+{
+  "provider": "granola",
+  "sources": [
+    "granola-notes-api-openapi.yml"
+  ],
+  "outputs": [
+    "granola-notes-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
