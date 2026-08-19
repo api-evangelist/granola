@@ -1,0 +1,536 @@
+{
+  "item": [
+    {
+      "id": "ec768698-8dc5-4266-928a-2f258885f10e",
+      "name": "Notes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b0bb056-3653-4bcb-aa24-a8e7a6b64ac9",
+          "name": "List notes",
+          "request": {
+            "name": "List notes",
+            "description": {
+              "content": "List notes accessible to the API key. Only returns notes that have a generated AI summary and transcript. Use `cursor` for pagination.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "Pagination cursor"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "25"
+                },
+                {
+                  "disabled": false,
+                  "key": "createdAfter",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "createdBefore",
+                  "value": "<dateTime>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aca751f4-e2bd-4d01-b681-314f9950a41c",
+              "name": "A page of notes",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "createdAfter",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "createdBefore",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"summary\": \"string\",\n      \"createdAt\": \"1962-06-30T01:48:39.306Z\",\n      \"updatedAt\": \"2010-03-24T13:43:40.277Z\",\n      \"meetingStartAt\": \"1957-01-24T05:06:25.735Z\",\n      \"meetingEndAt\": \"1950-07-15T02:04:55.034Z\",\n      \"scope\": \"public\",\n      \"attendees\": [\n        {\n          \"name\": \"string\",\n          \"email\": \"lm0qcjBwwthu@fnhgeNcfjYLCmXpAdWVlpJOHZ.ufj\"\n        },\n        {\n          \"name\": \"string\",\n          \"email\": \"6fIKU0qNq@uCQuHYzUYN.vq\"\n        }\n      ],\n      \"transcript\": [\n        {\n          \"speaker\": \"string\",\n          \"startMs\": 4565,\n          \"endMs\": 1592,\n          \"text\": \"string\"\n        },\n        {\n          \"speaker\": \"string\",\n          \"startMs\": 1455,\n          \"endMs\": 3467,\n          \"text\": \"string\"\n        }\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"summary\": \"string\",\n      \"createdAt\": \"1971-09-14T11:38:31.463Z\",\n      \"updatedAt\": \"2019-09-30T14:23:13.063Z\",\n      \"meetingStartAt\": \"1975-11-22T09:30:38.721Z\",\n      \"meetingEndAt\": \"1990-09-03T09:48:05.031Z\",\n      \"scope\": \"public\",\n      \"attendees\": [\n        {\n          \"name\": \"string\",\n          \"email\": \"iPKzlxcp9xkFu@pQhOUALLiHqmtaxAmdLLibMHZ.ryom\"\n        },\n        {\n          \"name\": \"string\",\n          \"email\": \"B5GshJ@ojnfoNrkMk.hzo\"\n        }\n      ],\n      \"transcript\": [\n        {\n          \"speaker\": \"string\",\n          \"startMs\": 5509,\n          \"endMs\": 6762,\n          \"text\": \"string\"\n        },\n        {\n          \"speaker\": \"string\",\n          \"startMs\": 5086,\n          \"endMs\": 7135,\n          \"text\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"cursor\": \"string\",\n  \"hasMore\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "84530412-f95a-42a5-8588-51e2fe8347b4",
+              "name": "Missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "createdAfter",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "createdBefore",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "af3dbc5b-0d5a-4e78-89f3-a4e775ec0b5f",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    },
+                    {
+                      "key": "createdAfter",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "createdBefore",
+                      "value": "<dateTime>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "25a92bce-8b19-411a-bda6-61e107459e36",
+          "name": "Retrieve a note",
+          "request": {
+            "name": "Retrieve a note",
+            "description": {
+              "content": "Retrieve a single note, optionally including the full transcript via `include=transcript`. Returns 404 if the note is still processing or does not have an AI summary.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "notes",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c0c8e826-4021-40d7-888a-31bb8f0094c6",
+              "name": "Note",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"title\": \"string\",\n  \"summary\": \"string\",\n  \"createdAt\": \"1955-03-25T09:18:08.460Z\",\n  \"updatedAt\": \"1996-07-24T06:07:59.513Z\",\n  \"meetingStartAt\": \"2014-09-08T17:53:24.232Z\",\n  \"meetingEndAt\": \"1977-09-10T20:55:32.865Z\",\n  \"scope\": \"personal\",\n  \"attendees\": [\n    {\n      \"name\": \"string\",\n      \"email\": \"tuvd-Gy@IQGHiXQ.bo\"\n    },\n    {\n      \"name\": \"string\",\n      \"email\": \"hEM8qybWz6es7s@IV.ahn\"\n    }\n  ],\n  \"transcript\": [\n    {\n      \"speaker\": \"string\",\n      \"startMs\": 4257,\n      \"endMs\": 2041,\n      \"text\": \"string\"\n    },\n    {\n      \"speaker\": \"string\",\n      \"startMs\": 4036,\n      \"endMs\": 4778,\n      \"text\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1fdd9e2-7b59-43b5-b9bb-5fa0d66db497",
+              "name": "Missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5ae500f7-425d-4e48-be2f-ac9d4dec708f",
+              "name": "Not found or not yet summarized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "318da371-36c4-401b-a26f-9e7524ae7c74",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notes",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://public-api.granola.ai/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "352fe8a1-39c6-4ede-8481-088ad8911889",
+    "name": "Granola Public Notes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 for Granola's Public API (Business and Enterprise plans). Provides read access to AI-summarized meeting notes and their transcripts. Authentication uses bearer API keys (`grn_...`). Rate limits are 25 requests per 5 seconds burst, 5 requests/second sustained.",
+      "type": "text/plain"
+    }
+  }
+}
