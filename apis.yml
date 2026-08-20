@@ -27,6 +27,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/granola.png
 tags:
+  - Artificial Intelligence
+  - Meeting Notes
+  - Transcription
+  - Productivity
+  - MCP
+  - Zapier
+  - Business
+  - Enterprise
+tags_raw:
   - AI
   - Meeting Notes
   - Transcription
@@ -71,6 +80,13 @@ apis:
   baseURL: https://public-api.granola.ai/v1
   tags:
   - REST
+  - APIKeys
+  - Bearer Token
+  - Notes
+  - Transcripts
+  - Folders
+  tags_raw:
+  - REST
   - API Key
   - Bearer Token
   - Notes
@@ -95,6 +111,11 @@ apis:
   humanURL: https://zapier.com/apps/granola/integrations
   baseURL: https://zapier.com
   tags:
+  - Zapier
+  - Automation
+  - Webhook
+  - Integration
+  tags_raw:
   - Zapier
   - Automation
   - Webhooks
