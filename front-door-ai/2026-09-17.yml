@@ -1,0 +1,26 @@
+# Front Door AI Index — granola — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: granola
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.granola.ai
+  final_host: www.granola.ai
+  ownership: own
+  owner: granola
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 9
+  host_score: 9
+  density: 6.54
+  words: 1376
+  tiers:
+    agentic: 1
+    core: 8
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 8
+    MCP: 1

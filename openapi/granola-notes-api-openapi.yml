@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Granola Public Notes API
   description: Best-effort OpenAPI 3.1 for Granola's Public API (Business and Enterprise plans). Provides read access to AI-summarized meeting notes and their transcripts. Authentication uses bearer API keys (`grn_...`). Rate limits are 25 requests per 5 seconds burst, 5 requests/second sustained.
@@ -145,10 +145,10 @@ components:
               text:
                 type: string
   responses:
-    Unauthorized:
-      description: Missing or invalid API key
     RateLimited:
       description: Rate limit exceeded
+    Unauthorized:
+      description: Missing or invalid API key
   securitySchemes:
     bearerAuth:
       type: http
