@@ -93,6 +93,11 @@ paths:
         '429':
           $ref: '#/components/responses/RateLimited'
 components:
+  responses:
+    RateLimited:
+      description: Rate limit exceeded
+    Unauthorized:
+      description: Missing or invalid API key
   schemas:
     Note:
       type: object
@@ -144,11 +149,6 @@ components:
                 type: integer
               text:
                 type: string
-  responses:
-    RateLimited:
-      description: Rate limit exceeded
-    Unauthorized:
-      description: Missing or invalid API key
   securitySchemes:
     bearerAuth:
       type: http

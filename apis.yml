@@ -69,7 +69,6 @@ apis:
     notes with AI, and supports customizable templates for different meeting types.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.granola.ai/
-  baseURL: https://www.granola.ai
   tags:
   - Consumer
   - Desktop
@@ -142,7 +141,7 @@ apis:
   name: Granola Notes API
   description: The Notes API from Granola — 2 operation(s) for notes.
   humanURL: https://www.granola.ai/
-  baseURL: https://www.granola.ai
+  baseURL: https://public-api.granola.ai/v1
   tags:
   - Notes
   properties:
