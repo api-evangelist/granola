@@ -94,10 +94,10 @@ paths:
           $ref: '#/components/responses/RateLimited'
 components:
   responses:
-    RateLimited:
-      description: Rate limit exceeded
     Unauthorized:
       description: Missing or invalid API key
+    RateLimited:
+      description: Rate limit exceeded
   schemas:
     Note:
       type: object
