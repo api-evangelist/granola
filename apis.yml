@@ -141,16 +141,36 @@ apis:
     url: https://zapier.com/apps/granola/integrations
   - type: WebhookConnector
     url: https://zapier.com/apps/granola/integrations/webhook
-- aid: granola:granola-notes-api
-  name: Granola Notes API
-  description: The Notes API from Granola — 2 operation(s) for notes.
+- aid: granola:granola-inbox-messages-api
+  name: Granola Inbox Messages API
+  description: Lease, acknowledge, and release inbox messages
   humanURL: https://www.granola.ai/
   baseURL: https://public-api.granola.ai/v1
   tags:
-  - Notes
+  - Inbox Messages
   properties:
   - type: OpenAPI
-    url: openapi/granola-notes-api-openapi.yml
+    url: openapi/granola-inbox-messages-api-openapi.yml
+- aid: granola:granola-inboxes-api
+  name: Granola Inboxes API
+  description: Create and manage trigger inboxes
+  humanURL: https://www.granola.ai/
+  baseURL: https://public-api.granola.ai/v1
+  tags:
+  - Inboxes
+  properties:
+  - type: OpenAPI
+    url: openapi/granola-inboxes-api-openapi.yml
+- aid: granola:granola-trigger-inbox-api-api
+  name: Granola Trigger Inbox API
+  description: The Trigger Inbox API API from Granola — 0 operation(s) for trigger inbox api.
+  humanURL: https://www.granola.ai/
+  baseURL: https://public-api.granola.ai/v1
+  tags:
+  - Trigger Inbox API
+  properties:
+  - type: OpenAPI
+    url: openapi/granola-trigger-inbox-api-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/granola-agentic-access.yml

@@ -1,0 +1,12 @@
+{
+ "url": "https://docs.zapier.com/api-reference/specs/trigger-inbox.yaml",
+ "final": "https://docs.zapier.com/api-reference/specs/trigger-inbox.yaml",
+ "status": 200,
+ "content_type": "text/yaml",
+ "bytes": 69368,
+ "sha256": "96451c1c1b275888eba2afe61af0773a450249c252630b90b8b4fd810242a099",
+ "fetched_at": "2026-10-19",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "re-archived: the provider's current document replaced a stale archive (roadmap#793); the old files are in openapi/_superseded/2026-10-19-stale"
+}

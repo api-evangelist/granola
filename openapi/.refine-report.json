@@ -4,7 +4,9 @@
     "_original/granola-openapi.yml"
   ],
   "outputs": [
-    "granola-notes-api-openapi.yml"
+    "granola-inbox-messages-api-openapi.yml",
+    "granola-inboxes-api-openapi.yml",
+    "granola-trigger-inbox-api-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
@@ -12,9 +14,9 @@
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "granola-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "granola-openapi.yml: tagged webhooks POST messageAvailable -> Trigger Inbox API",
+    "granola-openapi.yml: declared missing tag: Trigger Inbox API",
+    "apis.yml register: written (+3 apis, 6 total)"
   ],
-  "skipped": [
-    "granola-notes-api-openapi.yml: previously refined output, superseded by openapi/_original/"
-  ]
+  "skipped": []
 }

@@ -1,0 +1,67 @@
+openapi: 3.2.0
+info:
+  title: Trigger Inbox API
+  description: Manage trigger inboxes and their messages — create, pause, resume, and delete inboxes; list, lease, and acknowledge messages.
+  version: 1.0.0
+  contact:
+    url: https://docs.zapier.com
+servers:
+- url: https://api.zapier.com
+  description: Production
+security:
+- OAuth: []
+tags:
+- name: Trigger Inbox API
+paths: {}
+webhooks:
+  messageAvailable:
+    post:
+      summary: Message availability notification
+      description: Sent to the inbox's notification_url when new messages are available to lease. The payload signals availability only — it does not include message content. Consumers should call the lease endpoint to retrieve messages.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                inbox_id:
+                  type: string
+                  format: uuid
+                  description: The unique identifier of the inbox that has new messages.
+                received_message_count:
+                  type: integer
+                  description: The number of new messages available to lease. When redelivery is true, this is a nonzero placeholder rather than an exact count.
+                redelivery:
+                  type: boolean
+                  default: false
+                  description: True when this notification was manually re-sent after a delivery outage. received_message_count is a placeholder in that case, not a real count.
+              required:
+              - inbox_id
+              - received_message_count
+            examples:
+              available:
+                summary: Messages available
+                value:
+                  inbox_id: 3fa85f64-5717-4562-b3fc-2c963f66afa6
+                  received_message_count: 3
+                  redelivery: false
+      responses:
+        '200':
+          description: Notification acknowledged
+      tags:
+      - Trigger Inbox API
+components:
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 2.0 authentication.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://zapier.com/oauth/authorize
+          tokenUrl: https://zapier.com/oauth/token
+          scopes:
+            external: Scope that gives access to all Public APIs
+        clientCredentials:
+          tokenUrl: https://zapier.com/oauth/token
+          scopes:
+            external: Scope that gives access to all Public APIs
