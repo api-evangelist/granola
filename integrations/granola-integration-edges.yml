@@ -123,6 +123,98 @@ edges:
   detected: '2026-10-21'
   detected_by: mirror-platform-listings.py
   category: SALES_ENABLEMENT
+- partner_name: Raycast
+  partner: raycast
+  partner_match: domain
+  partner_url: https://www.raycast.com
+  partner_domain: raycast.com
+  type: marketplace
+  marketplace: raycast-store
+  channel: connector-listing
+  relationship: connector-coverage
+  evidence: https://www.raycast.com/Rob/granola
+  app: Granola
+  category: Raycast Store extension (community wrapper)
+  listing_count: 1
+  contract_reference:
+    register: Raycast Store (raycast/extensions monorepo + store_listings JSON)
+    spec_file: null
+    role: raycast-community-wrapper
+    builder: community
+    authors:
+    - Rob
+    matched_domain: granola.ai
+    matched_by: domain
+    monorepo_commit: 84f9ac51336a8c69f70974a75bc067c0feae3658
+    listings:
+    - title: Granola
+      store_url: https://www.raycast.com/Rob/granola
+      installs: 8347
+      categories:
+      - Productivity
+      - Documentation
+      - Communication
+      - AI Extensions
+      source: https://github.com/raycast/extensions/tree/84f9ac51336a8c69f70974a75bc067c0feae3658/extensions/granola/
+      author: Rob
+      ai_tools: true
+    categories:
+    - AI Extensions
+    - Communication
+    - Documentation
+    - Productivity
+    identity_note: the extension's own source calls a host on the product's domain AND its title / package name
+      passes partner_link's name check; built by Raycast community developers, not the vendor
+    signal_note: 'coverage: Raycast''s store reaches the product through community-built extensions; one edge per
+      (product, store); install / listing counts are context, never counted'
+    detected_by: sweep-raycast-store-extensions.py
+    detected: '2026-10-22'
+  detected_by: sweep-raycast-store-extensions.py
+  first_seen: '2026-10-22'
+  direction: partner-built
+- partner_name: Obsidian
+  partner: obsidian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: obsidian-community-plugins
+  channel: community-plugin
+  relationship: connector-listing
+  direction: third-party
+  evidence: https://github.com/og-sync/obsidian-granola-sync
+  app: Granola Sync
+  listing_count: 4
+  category: Obsidian community plugin
+  partner_url: https://obsidian.md/plugins
+  contract_reference:
+    register: Obsidian community-plugins.json (obsidianmd/obsidian-releases@793b5211) + plugin repo README / manifest
+      / source
+    spec_file: null
+    role: obsidian-community-plugin:community
+    registered_name: og-sync
+    register_id: https://github.com/og-sync/obsidian-granola-sync
+    matched_domain: granola.ai
+    matched_by: domain+name-in-listing
+    matched_where: README
+    matched_host: granola.ai
+    builder: community
+    plugins:
+    - granola-sync
+    - granola-meetings-simple-sync
+    - granola-sync-plus
+    - granola-api-sync
+    downloads_context: 35371
+    signal_note: 'ONE edge per provider: a community plugin names the provider in its name/description AND carries
+      the provider''s domain or API host in its README or source. Builder is a named community author (not the provider).
+      Plugin and download counts are context, never counted.'
+    detected_by: sweep-obsidian-community-plugins.py
+    detected: '2026-10-22'
+  detected_by: sweep-obsidian-community-plugins.py
+  first_seen: '2026-10-22'
+  apps:
+  - Granola Sync
+  - Granola Meetings Simple Sync
+  - Granola Sync Plus
+  - Granola API Sync
 method: searched
 checked:
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
@@ -137,5 +229,11 @@ checked:
 - https://www.sequoiacap.com/our-companies/
 - https://www.sequoiacap.com/sitemap.xml
 - hubspot/integrations/hubspot-integration-edges.yml
+- https://github.com/raycast/extensions/tree/84f9ac51336a8c69f70974a75bc067c0feae3658/extensions
+- https://www.raycast.com/api/v1/store_listings
+- https://raw.githubusercontent.com/<repo>/HEAD/README.md
+- https://raw.githubusercontent.com/<repo>/HEAD/manifest.json
+- https://raw.githubusercontent.com/obsidianmd/obsidian-releases/793b52114f54b055b760ef47761ec5c93d689804/community-plugin-stats.json
+- https://raw.githubusercontent.com/obsidianmd/obsidian-releases/793b52114f54b055b760ef47761ec5c93d689804/community-plugins.json
 source:
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
