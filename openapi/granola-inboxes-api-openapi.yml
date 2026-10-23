@@ -1081,3 +1081,9 @@ components:
           tokenUrl: https://zapier.com/oauth/token
           scopes:
             external: Scope that gives access to all Public APIs
+x-provenance:
+  method: harvested
+  publisher: Granola
+  source: https://docs.zapier.com/api-reference/specs/trigger-inbox.yaml
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
