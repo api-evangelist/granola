@@ -1,4 +1,4 @@
-# Granola (granola)
+# Granola
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,106 +66,128 @@
 
 Granola is an AI notepad for back-to-back meetings. It captures audio directly from the user's computer (no meeting bot), enhances handwritten notes with AI, and supports post-meeting tasks like follow-up drafting, action item extraction, and chat over the transcript. Works across Zoom, Google Meet, Webex, Microsoft Teams, and Slack. Granola exposes a public Granola API (Business and Enterprise plans) for programmatic access to notes, transcripts, and folders, plus an MCP server for conversational AI clients. Webhooks are on the roadmap; Zapier covers event-style automation today.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/granola/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Meeting Notes · Transcription · Productivity · MCP · Zapier · Business · Enterprise
 
-## Tags
+## Granola on APIs.io
 
-- AI
-- Meeting Notes
-- Transcription
-- Productivity
-- API
-- MCP
-- Zapier
-- Business
-- Enterprise
+Everything profiled for Granola is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/granola/](https://apis.io/providers/granola/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (4)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [Granola Desktop & Mobile App](https://apis.io/apis/granola/desktop-app/) — Consumer desktop app (macOS / Windows) and iPhone app that records meeting audio locally, enhances notes with AI, and supports customizable templates for…
+- [Granola Public API](https://apis.io/apis/granola/public-api/) — REST API for programmatic access to meeting notes, transcripts, AI summaries, and folders. Authentication is Bearer token using API keys prefixed with…
+- [Granola Zapier Integration](https://apis.io/apis/granola/zapier/) — Zapier integration for event-style automation connecting Granola to 8,000+ apps. Useful for webhook-like patterns until Granola ships native webhooks.
+- [Granola Notes API](https://apis.io/apis/granola/granola-notes-api/) — The Notes API from Granola — 2 operation(s) for notes.
 
-## APIs
+### Published properties
 
-### Granola Desktop & Mobile App
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Consumer desktop app (macOS / Windows) and iPhone app that records meeting audio locally, enhances notes with AI, and supports customizable templates for different meeting types.
+#### MCP servers (1)
 
-- **Human URL:** [https://www.granola.ai/](https://www.granola.ai/)
-- **Base URL:** `https://www.granola.ai`
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [granola](https://apis.io/servers/granola/granola/)
 
-- Consumer
-- Desktop
-- Mobile
-- Templates
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Product Page](https://www.granola.ai/)
-- [Integrations Guide](https://www.granola.ai/blog/granola-integrations-complete-guide-connecting-meeting-tools)
-- [Postman Collection](collections/granola.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/granola.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Granola Agentic Access](https://apis.io/agentic-access/granola/granola-agentic-access/)
 
-### Granola Public API
+#### Collections (2)
 
-REST API for programmatic access to meeting notes, transcripts, AI summaries, and folders. Authentication is Bearer token using API keys prefixed with `grn_`, created in Settings → Connectors → API keys. Requires Business or Enterprise plan. Endpoints include GET /notes, GET /notes/{id}, and GET /folders. Rate limits are 25 requests burst / 5 requests per second sustained. Webhooks are on the roadmap; current pattern is polling.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://docs.granola.ai/help-center/sharing/integrations/granola-api](https://docs.granola.ai/help-center/sharing/integrations/granola-api)
-- **Base URL:** `https://public-api.granola.ai/v1`
+- [Granola Public API](https://apis.io/collections/granola/open-granola/)
+- [Granola Public Notes API](https://apis.io/collections/granola/open-granola-notes-api/)
 
-#### Tags
+#### Security (4)
 
-- REST
-- API Key
-- Bearer Token
-- Notes
-- Transcripts
-- Folders
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Granola Authentication](https://apis.io/security/granola/granola-authentication/)
+- [Granola Domain Security](https://apis.io/security/granola/granola-domain-security/)
+- [Granola Trust Center](https://apis.io/security/granola/granola-trust-center/)
+- [Granola Vulnerability Disclosure](https://apis.io/security/granola/granola-vulnerability-disclosure/)
 
-- [Documentation](https://docs.granola.ai/introduction)
-- [A P I Docs](https://docs.granola.ai/help-center/sharing/integrations/granola-api)
-- [Docs Index](https://docs.granola.ai/llms.txt)
-- [Launch Announcement](https://www.createwith.com/tool/granola/updates/granola-launches-api-to-connect-meeting-notes-with-ai-agents-and-external-tools)
-- [Postman Collection](collections/granola.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/granola.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Granola Zapier Integration
+Published plans, tiers and prices.
 
-Zapier integration for event-style automation connecting Granola to 8,000+ apps. Useful for webhook-like patterns until Granola ships native webhooks.
+- [Granola Plans Pricing](https://apis.io/plans/granola/granola-plans-pricing/)
 
-- **Human URL:** [https://zapier.com/apps/granola/integrations](https://zapier.com/apps/granola/integrations)
-- **Base URL:** `https://zapier.com`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Zapier
-- Automation
-- Webhooks
-- Integration
+- [Granola Rate Limits](https://apis.io/rate-limits/granola/granola-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Zapier App](https://zapier.com/apps/granola/integrations)
-- [Webhook Connector](https://zapier.com/apps/granola/integrations/webhook)
-- [Postman Collection](collections/granola.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/granola.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-## Common Properties
+- [Granola Finops](https://apis.io/finops/granola/granola-finops/)
 
-- [LinkedIn](https://www.linkedin.com/company/granola-ai)
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.granola.ai/)
 - [Documentation](https://docs.granola.ai/introduction)
-- [A P I Docs](https://docs.granola.ai/help-center/sharing/integrations/granola-api)
 - [Blog](https://www.granola.ai/blog)
-- [Plans](plans/granola-plans-pricing.yml)
-- [Rate Limits](rate-limits/granola-rate-limits.yml)
-- [Fin Ops](finops/granola-finops.yml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.8** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.0 |
+| Contract quality | 53.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 13.2 |
+
+**Agent readiness 62.9** — agent-native
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | verified |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | na |
+| Error Semantics | verified |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | verified |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | paginated |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 20.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/granola/](https://apis.io/providers/granola/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Granola: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/granola/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
